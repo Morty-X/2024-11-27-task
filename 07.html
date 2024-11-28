@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07</title>
+</head>
+
+<body>
+    反转字符串 ("abcdef")-->("fedcba")
+    <script>
+        let str = 'abcdef'
+        let res = ''
+        // 倒序遍历拼接法
+        for (let i = str.length - 1; i >= 0; i--) {
+            res += str[i]
+        }
+        let newRes = str.split('').reverse().join('')
+        console.log(res);
+        console.log(newRes);
+
+    </script>
+</body>
+
+</html>

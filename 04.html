@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04</title>
+</head>
+
+<body>
+    2.将字符串中的字母使用**重新拼接：
+    // 如： var str = "a b c"; 变成 --> a**b**c
+    <script>
+        var str = "a b c";
+        let res = str.trim().split(' ').join('**')
+        console.log(res);
+        let str1 = 'abc'
+        let str2 = ''
+        for (let i = 0; i < str1.length; i++) {
+            // 是最后一个就加空字符串
+            let fix = i === str1.length - 1 ? '' : '**'
+            str2 += str1[i] + fix
+        }
+        console.log(str2);
+
+    </script>
+</body>
+
+</html>

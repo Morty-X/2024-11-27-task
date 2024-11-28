@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01</title>
+</head>
+
+<body>
+    <h1>hex颜色转dec颜色</h1>
+    <script>
+        // 颜色16进制表达法 #ffffff #fff
+        // 颜色10进制表达法 rgb(255,255,255)
+        // hex颜色转dec颜色
+
+        let inputData = prompt(`请输入一个6位或者3位的16进制表达式表示颜色(如：ffffff/123)`)
+        let outData = ''
+        let result = ''
+        if (inputData.length === 3) {
+            for (let i = 0; i < inputData.length; i++) {
+                for (let j = 0; j < 2; j++) {
+                    outData += inputData.slice(i, i + 1)
+                }
+            }
+        } else if (inputData.length === 6) {
+            outData = inputData
+        }
+        let count = 0
+        for (let i = 0; i < outData.length; i += 2) {
+            count++
+            let temp = outData.slice(i, i + 2)
+            let tempNum = parseInt(temp, 16)
+            if (count === 3) {
+                result += tempNum
+            } else {
+                result += tempNum + ','
+            }
+        }
+        console.log(`你输入的16进制是：${inputData},转为rgb格式是(${result})`);
+        document.write(`你输入的16进制是：${inputData},转为rgb格式是(${result})`)
+
+    </script>
+</body>
+
+</html>

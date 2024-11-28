@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05</title>
+</head>
+
+<body>
+    3.将字符串中—后面的小写字母变成大写，并且删除-符号 “abc—r67p8”----->“abcR67P8”
+    <script>
+        let str = 'abc—r67p8'
+        /*  let res = ''
+         let index = str.indexOf('—')
+         let temp = ''
+         for (let i = index + 1; i < str.length; i++) {
+             if (str[i] >= 'a' && str[i] <= 'z') {
+                 temp += str[i].toUpperCase()
+             } else {
+                 temp += str[i]
+             }
+         }
+         res = str.slice(0, index) + temp
+         console.log(res); */
+
+        let result = ''
+        //默认没有出现
+        let flag = false
+        for (let i = 0; i < str.length; i++) {
+            if (str[i] === '—') {
+                // 出现了 '—'
+                flag = true
+                // 让下一个位置的字母转为大写
+            } else if (flag) {
+                result += str[i].toUpperCase()
+            }
+            else {
+                result += str[i]
+            }
+        }
+        console.log(result);
+
+    </script>
+</body>
+
+</html>

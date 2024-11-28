@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02</title>
+</head>
+
+<body>
+    <h1>下划线命名法==>帕斯卡命名法 AbcDefGhi</h1>
+    <script>
+        // 驼峰命名法 abcDefGhi
+        // 下划线命名法 abc_def_ghi
+        // 帕斯卡命名法 AbcDefGhi
+        // 下划线命名法转换为驼峰命名法/帕斯卡命名法
+
+
+        // 下划线命名法==>帕斯卡命名法 AbcDefGhi
+        let msg = 'abc_def_ghi'
+        let temp = ''
+        let arr = msg.split('_')
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr[i].length; j++) {
+                if (j === 0) {
+                    temp += arr[i][j].toUpperCase()
+                } else {
+                    temp += arr[i][j]
+                }
+            }
+        }
+        console.log('帕斯卡命名法:  ' + temp);
+
+        // 下划线命名法==>驼峰命名法 abcDefGhi
+        let result = ''
+        result += arr[0]
+        for (let i = 1; i < arr.length; i++) {
+            for (let j = 0; j < arr[i].length; j++) {
+                if (j === 0) {
+                    result += arr[i][j].toUpperCase()
+                } else {
+                    result += arr[i][j]
+                }
+            }
+        }
+        console.log('驼峰命名法:    ' + result);
+
+    </script>
+</body>
+
+</html>

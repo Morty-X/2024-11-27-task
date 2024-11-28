@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09</title>
+</head>
+
+<body>
+    去字符串中所有的空格 " a b c " ---->"abc"
+    <script>
+        let str = ' a b c '
+        let res = ''
+        let temp = str.trim().split(' ')
+        // console.log(temp);
+        for (let i = 0; i < temp.length; i++) {
+            res += temp[i]
+        }
+        console.log(res);
+
+    </script>
+</body>
+
+</html>

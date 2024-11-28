@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11</title>
+</head>
+
+<body>
+    手机号隐私处理 "17798765690" ----> "177****5690"
+    <script>
+        let str = '17798765690'
+        let res = str.slice(0, 3) + '****' + str.slice(-4)
+        console.log(res);
+        let res2 = str.split('')
+        // splice() 方法就地移除或者替换已存在的元素和/或添加新的元素。
+        // 它可以改变原数组
+        res2.splice(3, 4, '****')
+        console.log(res2.join(''));
+        // console.log(res3);
+    </script>
+</body>
+
+</html>
